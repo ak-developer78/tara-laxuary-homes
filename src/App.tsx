@@ -226,7 +226,7 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 backdrop-blur-md border border-gold/30 text-gold-light text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
+                {/* <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 backdrop-blur-md border border-gold/30 text-gold-light text-[10px] font-bold uppercase tracking-[0.3em] mb-8"> */}
                   {/* The Pinnacle of Refinement */}
                 </span>
                 <h1 className="text-6xl md:text-9xl text-white font-serif font-bold mb-8 leading-[0.9] tracking-tighter text-balance">
