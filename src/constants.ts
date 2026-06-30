@@ -200,28 +200,28 @@ export const HOTELS: Hotel[] = [
       '/images/one/one (6).jpg'
     ]
   },
-  {
-    id: 'tara-sky-penthouse',
-    name: 'Tara Luxury Homes  – 2 BHK',
-    location: 'Chester Hills, Solan, Himachal Pradesh',
-    price: 3299,
-    rating: 4.8,
-    reviews: 156,
-    description: 'Ultra-modern 2 BHK penthouse . The pinnacle of urban luxury.',
-    image: '/images/app2 (4).jpg',
-    bhk: '2 BHK Smart Penthouse',
-    amenities: ['24/7 Staff', 'Free Wifi', 'Free Parking', 'Full Equipped Kitchen' , 'Smart TV (Prime Video)'],
-    type: 'Private',
-    gallery: [
-      '/images/app2 (1).jpg',
-      '/images/app2 (4).jpg',
-      '/images/app2 (8).jpg',
-      '/images/one one 1 (6).jpg',
-      '/images/one one 1 (4).jpg',
-      '/images/one one 1 (3).jpg',
-      '/images/one one 1 (2).jpg'
-    ]
-  },
+  // {
+  //   id: 'tara-sky-penthouse',
+  //   name: 'Tara Luxury Homes  – 2 BHK',
+  //   location: 'Chester Hills, Solan, Himachal Pradesh',
+  //   price: 3299,
+  //   rating: 4.8,
+  //   reviews: 156,
+  //   description: 'Ultra-modern 2 BHK penthouse . The pinnacle of urban luxury.',
+  //   image: '/images/app2 (4).jpg',
+  //   bhk: '2 BHK Smart Penthouse',
+  //   amenities: ['24/7 Staff', 'Free Wifi', 'Free Parking', 'Full Equipped Kitchen' , 'Smart TV (Prime Video)'],
+  //   type: 'Private',
+  //   gallery: [
+  //     '/images/app2 (1).jpg',
+  //     '/images/app2 (4).jpg',
+  //     '/images/app2 (8).jpg',
+  //     '/images/one one 1 (6).jpg',
+  //     '/images/one one 1 (4).jpg',
+  //     '/images/one one 1 (3).jpg',
+  //     '/images/one one 1 (2).jpg'
+  //   ]
+  // },
   {
     id: 'tara-azure-villa',
     name: 'Tara Luxury Homes  – 1 BHK',
