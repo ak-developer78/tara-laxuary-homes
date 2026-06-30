@@ -717,7 +717,7 @@ export default function App() {
                   <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
                     <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-gold shadow-2xl ring-8 ring-gold/10 transform group-hover:scale-105 transition-transform duration-500 shrink-0">
                       <img
-                        src="./src/images/owner.jpg"
+                        src="/images/owner.jpg"
                         alt="Kartikay Pandey"
                         className="w-full h-full object-cover object-[center_20%]"
                         referrerPolicy="no-referrer"
