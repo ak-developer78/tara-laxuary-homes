@@ -181,9 +181,9 @@ export const HOTELS: Hotel[] = [
   },
   {
     id: 'tara-lake-udaipur',
-    name: 'Tara Luxury  Homes  – 1 BHK',
+    name: 'Tara Luxury  Homes Premium – 1 BHK',
     location: 'Chester Hills, Solan, Himachal Pradesh',
-    price: 1799,
+    price: 2499,
     rating: 5.0,
     reviews: 940,
     description: 'A floating marble marvel in the heart of Lake Pichola. Royal treatment.',
@@ -245,7 +245,7 @@ export const HOTELS: Hotel[] = [
   },
   {
     id: 'tara-himalayan-retreat',
-    name: 'Tara Luxury Homes  – 1 BHK',
+    name: 'Studio Appartment – 1 BHK',
     location: 'Chester Hills, Solan, Himachal Pradesh',
     price: 1999,
     rating: 4.7,
