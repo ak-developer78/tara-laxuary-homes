@@ -674,23 +674,23 @@ export default function App() {
       </section>
 
       {/* Rating Section (Sliding Experience) */}
-      <section id="rating" className="scroll-mt-32 md:scroll-mt-24 bg-[#02140f] py-16 md:py-24 text-white overflow-hidden relative border-t border-b border-gold/10">
+      <section id="rating" className="scroll-mt-32 md:scroll-mt-24 bg-[#02140f] py-10 md:py-24 text-white overflow-hidden relative border-t border-b border-gold/10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,78,59,0.15),transparent_70%)] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-gold font-luxury italic text-xl md:text-2xl mb-2">Guest Reviews</h2>
-            <h3 className="text-3xl md:text-5xl font-serif font-bold leading-tight">What Our Guests Say</h3>
-            <div className="flex justify-center items-center gap-2 mt-4 text-xs tracking-widest uppercase font-bold text-gold-light/70">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-gold font-luxury italic text-lg md:text-2xl mb-1 md:mb-2">Guest Reviews</h2>
+            <h3 className="text-2xl md:text-5xl font-serif font-bold leading-tight">What Our Guests Say</h3>
+            <div className="flex justify-center items-center gap-2 mt-3 text-[10px] md:text-xs tracking-widest uppercase font-bold text-gold-light/70">
               <span className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={12} className="text-gold" fill="currentColor" />
+                  <Star key={i} size={10} className="text-gold" fill="currentColor" />
                 ))}
               </span>
               <span>4.9 / 5 Guest Rating</span>
             </div>
           </div>
 
-          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-between gap-4">
+          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-between gap-2 md:gap-4">
             {/* Left navigation arrow */}
             <button 
               onClick={() => setActiveRatingSlide((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length)}
@@ -729,7 +729,7 @@ export default function App() {
                 transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) translateZ(20px)`,
                 transition: 'transform 0.15s ease-out'
               }}
-              className="mx-2 sm:mx-6 md:mx-0 flex-1 bg-gradient-to-b from-[#032d22] via-[#022119] to-[#01140f] backdrop-blur-md border border-gold/35 p-6 sm:p-10 md:p-12 rounded-[24px] md:rounded-[32px] shadow-[0_30px_70px_rgba(212,175,55,0.22)] relative overflow-hidden group transition-all duration-300 z-10"
+              className="mx-1 sm:mx-6 md:mx-0 flex-1 bg-gradient-to-b from-[#032d22] via-[#022119] to-[#01140f] backdrop-blur-md border border-gold/35 p-5 sm:p-10 md:p-12 rounded-[20px] md:rounded-[32px] shadow-[0_30px_70px_rgba(212,175,55,0.22)] relative overflow-hidden group transition-all duration-300 z-10"
             >
               {/* Glowing spotlights inside the card */}
               <div 
@@ -747,7 +747,7 @@ export default function App() {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-transparent pointer-events-none"></div>
 
               {/* Decorative top quote mark */}
-              <div className="absolute -top-8 -left-4 text-gold/5 font-serif text-[240px] pointer-events-none select-none leading-none group-hover:scale-105 group-hover:text-gold/10 transition-all duration-500">
+              <div className="absolute -top-6 sm:-top-8 -left-4 text-gold/5 font-serif text-[150px] sm:text-[240px] pointer-events-none select-none leading-none group-hover:scale-105 group-hover:text-gold/10 transition-all duration-500">
                 “
               </div>
               
@@ -758,11 +758,11 @@ export default function App() {
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   exit={{ opacity: 0, y: -20, rotate: 0.5 }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
-                  className="w-full flex flex-col items-center text-center space-y-6 md:space-y-8 relative z-10"
+                  className="w-full flex flex-col items-center text-center space-y-4 md:space-y-8 relative z-10"
                 >
                   {/* Guest image with premium gold frame and verification badge */}
                   <div className="relative group/avatar">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gold p-1 shadow-2xl bg-luxury-black/40 relative z-10 transition-transform duration-500 group-hover/avatar:scale-105">
+                    <div className="w-16 h-16 sm:w-20 md:w-24 rounded-full overflow-hidden border-2 border-gold p-0.5 sm:p-1 shadow-2xl bg-luxury-black/40 relative z-10 transition-transform duration-500 group-hover/avatar:scale-105">
                       <img 
                         src={REVIEWS[activeRatingSlide].image} 
                         alt={REVIEWS[activeRatingSlide].name} 
@@ -773,31 +773,31 @@ export default function App() {
                     {/* Glowing colored ring behind avatar */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-amber-400 via-emerald-400 to-indigo-500 rounded-full blur-md opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 animate-[spin_8s_linear_infinite] -z-0"></div>
                     {/* Tiny gold verification checkmark shield */}
-                    <div className="absolute -bottom-1 right-1 bg-gradient-to-r from-amber-500 to-yellow-400 text-[#03221a] p-1.5 rounded-full shadow-lg border border-white/30 z-20">
-                      <ShieldCheck size={13} className="stroke-[3]" />
+                    <div className="absolute -bottom-1 right-1 bg-gradient-to-r from-amber-500 to-yellow-400 text-[#03221a] p-1 sm:p-1.5 rounded-full shadow-lg border border-white/30 z-20">
+                      <ShieldCheck size={11} className="stroke-[3]" />
                     </div>
                   </div>
 
                   {/* Stars with sequence pulse animation and neon glow */}
-                  <div className="flex justify-center gap-1.5 bg-gold/5 px-4 py-1.5 rounded-full border border-gold/20 backdrop-blur-md">
+                  <div className="flex justify-center gap-1 bg-gold/5 px-3 py-1 rounded-full border border-gold/15 backdrop-blur-md">
                     {Array.from({ length: REVIEWS[activeRatingSlide].rating }).map((_, i) => (
-                      <Star key={i} size={15} className="text-gold fill-gold drop-shadow-[0_0_5px_rgba(212,175,55,0.6)] animate-pulse" style={{ animationDelay: `${i * 150}ms` }} />
+                      <Star key={i} size={12} className="text-gold fill-gold drop-shadow-[0_0_5px_rgba(212,175,55,0.6)] animate-pulse" style={{ animationDelay: `${i * 150}ms` }} />
                     ))}
                     {REVIEWS[activeRatingSlide].rating < 5 && (
-                      <Star size={15} className="text-gold/20" />
+                      <Star size={12} className="text-gold/20" />
                     )}
                   </div>
 
                   {/* Review Text */}
-                  <blockquote className="text-lg sm:text-xl md:text-2xl font-serif italic text-white/95 leading-relaxed max-w-2xl px-4 drop-shadow-md font-light">
+                  <blockquote className="text-sm sm:text-lg md:text-2xl font-serif italic text-white/95 leading-relaxed max-w-2xl px-2 sm:px-4 drop-shadow-md font-light">
                     "{REVIEWS[activeRatingSlide].comment}"
                   </blockquote>
 
                   {/* Reviewer Details */}
-                  <div className="space-y-1">
-                    <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-white font-luxury text-2xl font-bold tracking-widest">{REVIEWS[activeRatingSlide].name}</h4>
-                    <p className="text-amber-400/80 text-[10px] uppercase tracking-[0.3em] font-sans font-bold flex items-center justify-center gap-2">
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <div className="space-y-0.5 sm:space-y-1">
+                    <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-white font-luxury text-lg sm:text-2xl font-bold tracking-widest">{REVIEWS[activeRatingSlide].name}</h4>
+                    <p className="text-amber-400/80 text-[8px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.3em] font-sans font-bold flex items-center justify-center gap-1.5">
+                      <span className="inline-block w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
                       <span>Verified Elite Member Stay</span>
                     </p>
                   </div>
@@ -815,17 +815,36 @@ export default function App() {
             </button>
           </div>
           
-          <div className="flex justify-center gap-1 mt-8 md:mt-12 flex-wrap max-w-xs mx-auto">
-            {REVIEWS.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setActiveRatingSlide(i)}
-                className="p-3 transition-all focus:outline-none"
-                aria-label={`Go to review ${i + 1}`}
-              >
-                <div className={`h-2 rounded-full transition-all duration-500 ${activeRatingSlide === i ? 'bg-gold w-7' : 'bg-white/20 w-2 hover:bg-white/45'}`} />
-              </button>
-            ))}
+          {/* Bottom control bar with compact navigation and dot indicators */}
+          <div className="flex items-center justify-center gap-4 mt-6 md:mt-12">
+            <button 
+              onClick={() => setActiveRatingSlide((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length)}
+              className="flex md:hidden w-8 h-8 rounded-full border border-gold/20 items-center justify-center text-gold hover:bg-gold hover:text-[#02140f] hover:border-gold transition-all backdrop-blur-md bg-white/5 active:scale-95 shrink-0"
+              aria-label="Previous Review"
+            >
+              <ArrowLeft size={14} />
+            </button>
+
+            <div className="flex justify-center gap-0.5 sm:gap-1 flex-wrap max-w-[180px] sm:max-w-xs mx-auto">
+              {REVIEWS.map((_, i) => (
+                <button 
+                  key={i} 
+                  onClick={() => setActiveRatingSlide(i)}
+                  className="p-1 sm:p-2 transition-all focus:outline-none"
+                  aria-label={`Go to review ${i + 1}`}
+                >
+                  <div className={`h-1 rounded-full transition-all duration-500 ${activeRatingSlide === i ? 'bg-gold w-4 sm:w-6' : 'bg-white/20 w-1 sm:w-1.5 hover:bg-white/45'}`} />
+                </button>
+              ))}
+            </div>
+
+            <button 
+              onClick={() => setActiveRatingSlide((prev) => (prev + 1) % REVIEWS.length)}
+              className="flex md:hidden w-8 h-8 rounded-full border border-gold/20 items-center justify-center text-gold hover:bg-gold hover:text-[#02140f] hover:border-gold transition-all backdrop-blur-md bg-white/5 active:scale-95 shrink-0"
+              aria-label="Next Review"
+            >
+              <ArrowRight size={14} />
+            </button>
           </div>
         </div>
       </section>
@@ -1189,7 +1208,7 @@ export default function App() {
                       e.stopPropagation();
                       setActiveImageIndex((prev) => (prev === 0 ? allHotelImages.length - 1 : prev - 1));
                     }}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/45 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/45 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:scale-105 active:scale-95 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100"
                   >
                     <ArrowLeft size={18} />
                   </button>
@@ -1198,7 +1217,7 @@ export default function App() {
                       e.stopPropagation();
                       setActiveImageIndex((prev) => (prev === allHotelImages.length - 1 ? 0 : prev + 1));
                     }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/45 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:scale-105 active:scale-95 transition-all duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/45 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:scale-105 active:scale-95 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100"
                   >
                     <ChevronRight size={18} />
                   </button>
